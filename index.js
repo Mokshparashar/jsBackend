@@ -6,10 +6,11 @@ const app = express();
 const port = process.env.PORT;
 console.log(data);
 const corsOptions = {
-  origin: "https://worldFactz.netlify.app",
+  origin: "https://worldfactz.netlify.app",
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
+app.use(cors(corsOptions));
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
@@ -22,7 +23,6 @@ app.get("/login", (req, res) => {
 app.get("/api/adarsh", (req, res) => {
   res.json(data);
 });
-app.use(cors(corsOptions));
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
