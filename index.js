@@ -13,7 +13,7 @@ app.get("/twitter", (req, res) => {
 app.get("/login", (req, res) => {
   res.send("<h1>Login</h1>");
 });
-app.get("/adarsh", (req, res) => {
+app.get("/api/adarsh", (req, res) => {
   res.json(data);
 });
 
