@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT;
 console.log(data);
 const corsOptions = {
-  origin: "https://worldfactz.netlify.app",
+  origin: ["https://worldfactz.netlify.app", "https://localhost:5173"],
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
